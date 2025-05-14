@@ -37,8 +37,7 @@ function update(time) {
 }
 
 function checkLose() {
-  const dinoRect = getDinoRect()
-  return getCactusRects().some(rect => isCollision(rect, dinoRect))
+  return false;
 }
 
 function isCollision(rect1, rect2) {
@@ -51,7 +50,7 @@ function isCollision(rect1, rect2) {
 }
 
 function updateSpeedScale(delta) {
-  speedScale += delta * SPEED_SCALE_INCREASE
+  speedScale += delta * SPEED_SCALE_INCREASE * 20
 }
 
 function updateScore(delta) {
